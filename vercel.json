@@ -1,15 +1,24 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "fluid": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index.php", "destination": "/index.html" },
+    { "source": "/datasets.php", "destination": "/index.html" },
+    { "source": "/dataset.php", "destination": "/index.html" },
+    { "source": "/upload.php", "destination": "/index.html" },
+    { "source": "/forecast.php", "destination": "/index.html" },
+    { "source": "/history.php", "destination": "/index.html" },
+    { "source": "/lstm_setup.php", "destination": "/index.html" }
+  ],
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
     },
     {
-      "source": "/data/(.*)",
+      "source": "/data/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
