@@ -1,0 +1,33 @@
+RUPIAHCAST PRO LSTM — CARA DEPLOY KE VERCEL
+============================================
+
+1. Ekstrak file ZIP.
+2. Buka folder rupiahcast-vercel.
+3. Hapus file aplikasi lama di repository, lalu upload seluruh isi folder tersebut.
+4. Jangan upload folder .venv, .git lama, atau file ZIP proyek.
+5. Di Vercel pilih Add New > Project.
+6. Import repository GitHub.
+7. Pastikan Root Directory berisi:
+   - app.py
+   - requirements.txt
+   - vercel.json
+   - public/
+   - engine/
+8. Framework Preset boleh dibiarkan otomatis/Other.
+9. Kosongkan Build Command dan Output Directory.
+10. Klik Deploy.
+11. Uji:
+    https://domain-anda.vercel.app/api/health
+12. Buka halaman utama:
+    https://domain-anda.vercel.app/
+
+Bila proyek lama masih gagal:
+- Vercel > Project Settings > Build & Deployment
+- hapus override Build Command dan Output Directory
+- Deployments > Redeploy
+
+CATATAN:
+- Tampilan dashboard dipertahankan.
+- URL .php lama tetap dapat dibuka, tetapi aplikasi tidak lagi menjalankan PHP.
+- Dataset dan riwayat disimpan di localStorage browser.
+- Engine aktif menggunakan LSTM NumPy dan model dapat diunduh sebagai .npz.

@@ -1,0 +1,19 @@
+RUPIAHCAST PRO LSTM — HASIL PEMERIKSAAN
+========================================
+
+[OK] app.py dan engine/numpy_lstm.py berhasil dikompilasi.
+[OK] public/assets/app.js lolos pemeriksaan sintaks Node.js.
+[OK] vercel.json dan public/data/seed.json valid.
+[OK] Route /, /index.php, /datasets.php mengembalikan halaman HTML.
+[OK] Route /health.php dan /api/health mengembalikan diagnostik JSON.
+[OK] Asset CSS dan dataset seed dapat dilayani.
+[OK] Endpoint POST /api/lstm menghasilkan forecasting, metrik, interval,
+     dan checkpoint model .npz.
+[OK] Pengujian dataset penuh: 4.277 observasi, horizon 14, 20 epoch,
+     selesai sekitar 2 detik pada lingkungan pengujian lokal.
+[OK] File CSS utama identik dengan proyek awal berdasarkan SHA-256:
+     d60783e9bc5b17d5e0de3a39310867964cf9a6bb51928c82705f42448978442f
+
+Catatan: waktu eksekusi aktual di Vercel dapat berbeda mengikuti cold start,
+CPU, dan beban platform. Deployment publik belum dijalankan dari lingkungan
+pengujian ini karena membutuhkan akun Vercel milik pengguna.
